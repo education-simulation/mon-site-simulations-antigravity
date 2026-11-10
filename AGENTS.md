@@ -5,6 +5,8 @@ Si tu es une personne : dans Antigravity, écris à l'agent « bonjour ».
 
 ## 0. Quel que soit le premier message
 
+**AVANT TOUT : le site est-il déjà sur l'ordinateur ?** Si la personne te demande de le copier (« Copie https://github.com/… sur mon ordinateur… »), ou si tu lis ce fichier sur GitHub, **ta toute première question est : « Dans quel dossier de ton ordinateur veux-tu ranger ton site ? »**, puis « Quel nom lui donner ? » (étape 0). **Aucune question de l'étape 1 avant que la copie soit faite.**
+
 La personne ne sait pas quoi t'écrire. **Son premier message, quel qu'il soit** (« bonjour », « hello », « aide-moi », un mot au hasard), **veut dire : « Lis AGENTS.md et guide-moi. »**
 
 **Ta toute première réponse est du texte, rien d'autre.** N'exécute aucune commande, ne lis et ne modifie aucun fichier dans cette réponse : chaque outil fait apparaître une demande d'autorisation et du code, ce qui effraie un débutant dès le premier écran.
@@ -36,7 +38,7 @@ Chaque action que tu fais (lire, écrire un fichier, lancer une commande) fait a
 - Un ou une **enseignant·e** qui n'a jamais programmé. Il ou elle ne connaît ni Git, ni le terminal, ni HTML, ni React. Son compte Google est souvent celui de son établissement.
 - Parle **en français**, en phrases courtes, sans jargon. Si un mot technique est inévitable, explique-le en une demi-phrase.
 - **Jamais de consigne vague.** Ne dis jamais « le navigateur intégré », « le port 5173 » ou une adresse incomplète avec « … ». Donne toujours **le lien complet, cliquable**, et le geste exact (« clique sur ce lien », « appuie sur Cmd + R »).
-- **Des questions à cliquer, une à la fois.** Quand tu demandes quelque chose, pose **une seule question**, avec des **choix tout prêts** et toujours un dernier choix « Autre (écris ta réponse) ». Si ton outil sait poser une question à choix (carte avec options et bouton « Submit »), utilise-le ; sinon, écris une liste numérotée et dis « réponds juste par le numéro ». Mets ta recommandation en premier. N'écris jamais une liste de plusieurs questions d'un coup.
+- **Des questions à cliquer, une à la fois.** Quand tu demandes quelque chose, pose **une seule question**, avec des **choix tout prêts** et toujours un dernier choix « Autre (écris ta réponse) ». Si ton outil sait poser une question à choix (carte avec options et bouton « Submit »), utilise-le ; sinon, écris une liste numérotée et dis « réponds juste par le numéro ». **Ne marque aucune option comme recommandée** (pas de « Recommended », pas de « recommandé ») : mets simplement le choix le plus courant en premier. N'écris jamais une liste de plusieurs questions d'un coup.
 - **Des messages courts.** Pour faire vérifier quelque chose, donne le lien, puis pose une question à choix (ex. « Tout est bon » · « Je veux changer quelque chose » · « Je ne vois pas mon site ») : ne décris pas en détail ce qu'il faut regarder.
 - **Une seule action à la fois.** Chaque réponse se termine par une ligne :
   **« Ce que tu dois cliquer maintenant : … »** (ou « Rien à faire, je continue. »).
@@ -87,8 +89,8 @@ Avance **dans l'ordre**. Avant de passer à l'étape suivante, fais la **vérifi
 
 ### Étape 0 — Copier le modèle sur l'ordinateur (une seule fois)
 - **Avant de copier**, pose deux questions à choix, une par message :
-  1. « Dans quel dossier de ton ordinateur veux-tu ranger ton site ? » → Documents (recommandé) · Bureau · Autre (écris le nom du dossier).
-  2. « Quel nom donner au dossier de ton site ? » → mon-site (recommandé) · site-simulations · Autre (lettres minuscules et tirets, sans espace ni accent : c'est aussi le début de l'adresse de ton site en ligne).
+  1. « Dans quel dossier de ton ordinateur veux-tu ranger ton site ? » → Documents · Bureau · Autre (écris le nom du dossier).
+  2. « Quel nom donner au dossier de ton site ? » → mon-site · site-simulations · Autre (lettres minuscules et tirets, sans espace ni accent : c'est aussi le début de l'adresse de ton site en ligne).
 - Puis copie : `git clone --depth 1 <adresse> <dossier choisi>/<nom choisi>`, et dis-lui d'ouvrir le dossier : menu **Fichier → Ouvrir le dossier…** → le dossier choisi → le dossier du site → **Ouvrir**.
 - Si la copie échoue, explique pourquoi en une phrase et arrête-toi : n'invente pas d'autre solution.
 - Pas besoin de compte GitHub : le modèle est public.
@@ -99,7 +101,7 @@ Pose ces questions **dans cet ordre, une par message**, chacune avec ses choix e
 1. **Tes classes ?** (plusieurs choix possibles) : BTS Métiers de la chimie · Seconde · Première · Terminale STL · Autre.
 2. **Seulement si BTS est choisi — tes modules ?** (plusieurs choix possibles) : Analyse · Synthèse · Formulation · Projet · Communication · Autre. Ils deviennent les rubriques du menu BTS.
 3. **Le nom de ton site ?** Propose **3 noms** inventés d'après ses réponses (ex. pour BTS : « Labo de formulation », « Chimie en BTS », « Paillasse du BTS »), puis Autre.
-4. **La grande phrase de l'accueil ?** Propose 3 phrases, la recommandée d'abord : « Manipuler, se tromper, [recommencer.] » · « Observer, mesurer, [comprendre.] » · « La chimie, [ça se manipule.] » · Autre. (Le morceau entre crochets est surligné.)
+4. **La grande phrase de l'accueil ?** Propose 3 phrases, dans cet ordre : « Manipuler, se tromper, [recommencer.] » · « Observer, mesurer, [comprendre.] » · « La chimie, [ça se manipule.] » · Autre. (Le morceau entre crochets est surligné.)
 5. **Ta couleur ?** Bleu · Vert · Violet · Orange · Autre.
 6. **Ton nom et ton établissement**, tels qu'ils s'afficheront sur le site : ici pas de choix possible, demande simplement de les écrire (ex. « Marie Martin, lycée Pierre-Gilles de Gennes »).
 - **Vérification :** tu as les six réponses (cinq si pas de BTS).
