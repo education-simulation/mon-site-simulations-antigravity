@@ -4,13 +4,12 @@
 import { useEffect, useState } from "react";
 
 const ETAPES = [
-  ["Copier ton site sur l'ordinateur", "Dans Antigravity, tu as demandé à l'agent de copier ton dépôt. C'est fait si tu lis ce texte."],
+  ["Copier le modèle sur l'ordinateur", "Dans Antigravity, tu as demandé à l'agent de copier le modèle. C'est fait si tu lis ce texte."],
   ["Faire connaissance", "L'agent te pose quelques questions, une par une : clique sur la réponse qui te convient."],
   ["Personnaliser le site", "L'agent change le titre, la couleur et les niveaux. Toi : recharge cet onglet (Cmd + R)."],
-  ["Enregistrer dans GitHub", "L'agent s'en charge. La première fois, GitHub peut te demander de te connecter dans ton navigateur : clique « Authorize »."],
-  ["Mettre en ligne (une seule fois)", "Sur GitHub, dans ton dépôt : Settings → Pages → Source : « GitHub Actions ». Ne clique sur aucun « Configure ». Le dépôt doit être Public. GitHub peut demander un code sur ton téléphone (application GitHub Mobile)."],
-  ["Voir le site en ligne", "Onglet Actions du dépôt : un rond orange tourne pendant 1 à 2 minutes, patiente jusqu'à la coche verte. Puis ouvre https://ton-pseudo.github.io/nom-du-depot/"],
-  ["Créer ta première simulation", "Dis à l'agent ce que tu veux que tes élèves manipulent."],
+  ["Mettre en ligne avec Vercel", "La première fois : clique sur le lien donné par l'agent, « Continue with Google » avec ton compte d'établissement, vérifie le code, puis « Confirm »."],
+  ["Voir le site en ligne", "Ouvre l'adresse https://nom-de-ton-site.vercel.app donnée par l'agent, aussi sur ton téléphone."],
+  ["Créer ta première simulation", "Choisis la classe et l'idée proposées par l'agent. Il remet ensuite le site en ligne."],
 ];
 
 export const estApercu = typeof location !== "undefined" && ["localhost", "127.0.0.1"].includes(location.hostname);
