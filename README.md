@@ -12,16 +12,17 @@ Pas besoin de compte GitHub. Il te faut seulement **Antigravity**, installé sur
 1. Ouvre **Antigravity**.
 2. Copie cette phrase (sélectionne-la, puis **Cmd + C** sur Mac ou **Ctrl + C** sur Windows) et colle-la dans la conversation avec l'agent (**Cmd + V** ou **Ctrl + V**) :
 
-   > **Copie https://github.com/education-simulation/coque-prof-simulations dans mon dossier Documents sous le nom mon-site, puis lis AGENTS.md et guide-moi. Si la copie échoue, explique-moi pourquoi en une phrase et arrête-toi.**
+   > **Copie https://github.com/education-simulation/coque-prof-simulations sur mon ordinateur, puis lis AGENTS.md et guide-moi.**
 
-3. Des petites fenêtres te demandent la permission : l'agent te dit à chaque fois sur quel choix cliquer.
+3. L'agent te demande dans quel dossier ranger ton site et quel nom lui donner : clique sur ta réponse.
+4. Des petites fenêtres te demandent la permission : l'agent te dit à chaque fois sur quel choix cliquer.
 
 L'agent te guide ensuite pas à pas, avec des questions à cliquer : personnaliser ton site, le voir sur ton ordinateur, le mettre en ligne avec Vercel (la première fois : « Continue with Google »), créer tes simulations.
 La première fois, il te fera peut-être installer **Node.js** (gratuit, sur nodejs.org) : c'est le moteur qui fait tourner l'aperçu de ton site.
 
 ### Les fois suivantes
 
-Ouvre Antigravity, puis **Fichier → Ouvrir le dossier…** → **Documents** → **mon-site**, et écris à l'agent : **« on reprend »**.
+Ouvre Antigravity, puis **Fichier → Ouvrir le dossier…** → le dossier de ton site, et écris à l'agent : **« on reprend »**.
 
 ---
 

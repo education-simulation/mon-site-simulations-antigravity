@@ -8,7 +8,7 @@ Si tu es une personne : dans Antigravity, écris à l'agent « bonjour ».
 La personne ne sait pas quoi t'écrire. **Son premier message, quel qu'il soit** (« bonjour », « hello », « aide-moi », un mot au hasard), **veut dire : « Lis AGENTS.md et guide-moi. »**
 
 **Ta toute première réponse est du texte, rien d'autre.** N'exécute aucune commande, ne lis et ne modifie aucun fichier dans cette réponse : chaque outil fait apparaître une demande d'autorisation et du code, ce qui effraie un débutant dès le premier écran.
-- Seule exception : la personne t'a demandé de **copier le modèle** (« Copie https://github.com/… dans mon dossier Documents… »). Alors la copie (`git clone --depth 1 <adresse> ~/Documents/<nom>`) est la seule action de ta première réponse, précédée du message en gras ci-dessous. Ensuite, dis-lui d'ouvrir le dossier pour voir ses fichiers : menu **Fichier → Ouvrir le dossier…** → **Documents** → le dossier de son site → **Ouvrir**. Puis enchaîne sur la première question de l'étape 1.
+- Seule exception : la personne t'a demandé de **copier le modèle** (« Copie https://github.com/… sur mon ordinateur… »). Fais alors l'étape 0 : deux questions à choix (dossier, puis nom), puis la copie, seule action, précédée du message en gras ci-dessous. Puis enchaîne sur la première question de l'étape 1.
 - Dis bonjour en une phrase, explique en une phrase ce que vous allez faire ensemble (« créer ton site de simulations pour tes élèves, pas à pas »), puis pose **la première question** de l'étape 1.
 - Si la personne a déjà un site personnalisé et revient pour continuer, elle te le dira : demande-lui simplement « on reprend où tu en étais ? ».
 
@@ -86,7 +86,11 @@ Pour montrer un changement, la consigne est toujours de cette forme :
 Avance **dans l'ordre**. Avant de passer à l'étape suivante, fais la **vérification** et attends que la personne confirme.
 
 ### Étape 0 — Copier le modèle sur l'ordinateur (une seule fois)
-- La personne t'a donné l'adresse du modèle sur GitHub : copie-le dans `~/Documents` sous le nom qu'elle a donné (sinon `mon-site`) avec `git clone --depth 1 <adresse> ~/Documents/<nom>`, puis dis-lui d'ouvrir le dossier (menu **Fichier → Ouvrir le dossier…** → Documents → le dossier du site → **Ouvrir**).
+- **Avant de copier**, pose deux questions à choix, une par message :
+  1. « Dans quel dossier de ton ordinateur veux-tu ranger ton site ? » → Documents (recommandé) · Bureau · Autre (écris le nom du dossier).
+  2. « Quel nom donner au dossier de ton site ? » → mon-site (recommandé) · site-simulations · Autre (lettres minuscules et tirets, sans espace ni accent : c'est aussi le début de l'adresse de ton site en ligne).
+- Puis copie : `git clone --depth 1 <adresse> <dossier choisi>/<nom choisi>`, et dis-lui d'ouvrir le dossier : menu **Fichier → Ouvrir le dossier…** → le dossier choisi → le dossier du site → **Ouvrir**.
+- Si la copie échoue, explique pourquoi en une phrase et arrête-toi : n'invente pas d'autre solution.
 - Pas besoin de compte GitHub : le modèle est public.
 - Ce que tu dois cliquer maintenant : le 2e choix de la petite fenêtre, puis Fichier → Ouvrir le dossier.
 
