@@ -73,7 +73,7 @@ Chaque action que tu fais (lire, écrire un fichier, lancer une commande) fait a
 
 L'aperçu tourne **sur l'ordinateur de la personne**. À ta première vraie action (étape 2), lance-le toi-même, **en arrière-plan** (il doit continuer à tourner) :
 `npm install && npm run dev`
-- Le lien est celui que Vite affiche après « Local: », en principe **http://localhost:5173/**. Garde-le et **donne-le en entier** chaque fois que la personne doit regarder son site. Tu peux l'ouvrir dans le navigateur d'Antigravity, ou la personne le colle dans Chrome.
+- Le lien est **celui que Vite affiche après « Local: »** (par exemple `http://localhost:5537/`). Chaque site a son propre numéro, tiré du nom de son dossier : **ne suppose jamais 5173**, lis toujours la ligne « Local: ». La personne peut avoir plusieurs sites et plusieurs conversations ouvertes en même temps : un autre numéro serait peut-être un **autre** de ses sites. Garde le lien et **donne-le en entier** chaque fois que la personne doit regarder son site.
 - Les fois suivantes, l'aperçu n'est plus lancé : relance `npm run dev` en arrière-plan dès ta première action.
 - **Si la commande répond que `npm` est introuvable** (« command not found ») : Node.js n'est pas installé. Tu ne peux pas l'installer toi-même. Guide la personne, une consigne à la fois : « Ouvre https://nodejs.org dans ton navigateur et clique sur le gros bouton vert **Télécharger (LTS)**. Ouvre le fichier téléchargé, puis clique **Continuer**, **Accepter**, **Installer** (l'ordinateur demande ton mot de passe : c'est normal). À la fin, **ferme complètement Antigravity** (Cmd + Q sur Mac) et rouvre-le, puis écris-moi « c'est installé ». »
 - **Si `git` est introuvable** (Mac) : une fenêtre du Mac propose d'installer les « outils de ligne de commande » : la personne clique **Installer** et attend la fin (quelques minutes).
@@ -139,6 +139,7 @@ Propose, une par une : une deuxième simulation, un nouveau module ou chapitre, 
 | Symptôme | Cause probable | Que faire |
 |---|---|---|
 | L'aperçu ne s'ouvre pas (« connexion refusée ») | Le serveur n'est pas lancé (Antigravity a été fermé) | Relancer `npm run dev` en arrière-plan |
+| L'aperçu montre un autre site que celui de la conversation | Lien d'un autre site (autre dossier, autre conversation) | Relire la ligne « Local: » du serveur lancé dans CE dossier et redonner ce lien |
 | `npm` introuvable | Node.js pas installé | Section 3 : guider l'installation depuis nodejs.org |
 | Encadré rouge « Cette simulation n'a pas pu s'afficher » | Erreur dans le fichier de la simulation | Lire le message affiché, corriger `simulations/<Nom>.jsx` |
 | « Simulation … introuvable » ou « Fichier … introuvable » | `id` ou `fichier` faux | Vérifier la ligne dans `site.config.js` |
