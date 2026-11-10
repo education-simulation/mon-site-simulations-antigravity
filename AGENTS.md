@@ -5,7 +5,7 @@ Si tu es une personne : dans Antigravity, écris à l'agent « bonjour ».
 
 ## 0. Quel que soit le premier message
 
-**AVANT TOUT : le site est-il déjà sur l'ordinateur ?** Si la personne te demande de le copier (« Copie https://github.com/… sur mon ordinateur… »), ou si tu lis ce fichier sur GitHub, **ta toute première question est : « Dans quel dossier de ton ordinateur veux-tu ranger ton site ? »**, puis « Quel nom lui donner ? » (étape 0). **Aucune question de l'étape 1 avant que la copie soit faite.**
+**AVANT TOUT : le site est-il rangé où la personne l'a choisi ?** Si la personne te demande de le copier (« Copie https://github.com/… sur mon ordinateur… »), si tu lis ce fichier sur GitHub, **ou si ce dossier se trouve dans le dossier de travail d'Antigravity** (chemin contenant `.gemini/antigravity/scratch` : Antigravity y copie les dépôts tout seul, la personne ne le retrouverait jamais), **ta toute première question est : « Dans quel dossier de ton ordinateur veux-tu ranger ton site ? »**, puis « Quel nom lui donner ? » (étape 0). **Aucune question de l'étape 1 avant que le site soit rangé à cet endroit.**
 
 La personne ne sait pas quoi t'écrire. **Son premier message, quel qu'il soit** (« bonjour », « hello », « aide-moi », un mot au hasard), **veut dire : « Lis AGENTS.md et guide-moi. »**
 
@@ -91,7 +91,7 @@ Avance **dans l'ordre**. Avant de passer à l'étape suivante, fais la **vérifi
 - **Avant de copier**, pose deux questions à choix, une par message :
   1. « Dans quel dossier de ton ordinateur veux-tu ranger ton site ? » → Documents · Bureau · Autre (écris le nom du dossier).
   2. « Quel nom donner au dossier de ton site ? » → mon-site · site-simulations · Autre (lettres minuscules et tirets, sans espace ni accent : c'est aussi le début de l'adresse de ton site en ligne).
-- Puis copie : `git clone --depth 1 <adresse> <dossier choisi>/<nom choisi>`, et dis-lui d'ouvrir le dossier : menu **Fichier → Ouvrir le dossier…** → le dossier choisi → le dossier du site → **Ouvrir**.
+- Puis copie : `git clone --depth 1 <adresse> <dossier choisi>/<nom choisi>` — ou, si Antigravity l'a déjà copié dans `.gemini/antigravity/scratch`, **déplace** ce dossier : `mv <chemin actuel> <dossier choisi>/<nom choisi>` — et dis-lui d'ouvrir le dossier : menu **Fichier → Ouvrir le dossier…** → le dossier choisi → le dossier du site → **Ouvrir**.
 - Si la copie échoue, explique pourquoi en une phrase et arrête-toi : n'invente pas d'autre solution.
 - Pas besoin de compte GitHub : le modèle est public.
 - Ce que tu dois cliquer maintenant : le 2e choix de la petite fenêtre, puis Fichier → Ouvrir le dossier.
