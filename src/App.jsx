@@ -24,7 +24,8 @@ function composant(fichier) {
 // Menus : un par niveau, ses simulations regroupées par chapitre (dans l'ordre de site.config.js).
 function construireMenus(site) {
   return (site.niveaux || []).map((n) => {
-    const chapitres = [];
+    // Chapitres déclarés dans le niveau (même vides), puis ceux des simulations.
+    const chapitres = (n.chapitres || []).map((nom) => ({ nom, sims: [] }));
     site.simulations.filter((s) => s.niveau === n.id).forEach((s) => {
       const nom = s.chapitre || "Simulations";
       let c = chapitres.find((x) => x.nom === nom);

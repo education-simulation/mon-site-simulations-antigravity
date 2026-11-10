@@ -8,8 +8,8 @@ Si tu es une personne : dans Antigravity, écris à l'agent « bonjour ».
 La personne ne sait pas quoi t'écrire. **Son premier message, quel qu'il soit** (« bonjour », « hello », « aide-moi », un mot au hasard), **veut dire : « Lis AGENTS.md et guide-moi. »**
 
 **Ta toute première réponse est du texte, rien d'autre.** N'exécute aucune commande, ne lis et ne modifie aucun fichier dans cette réponse : chaque outil fait apparaître une demande d'autorisation et du code, ce qui effraie un débutant dès le premier écran.
-- Seule exception : la personne t'a demandé de **copier son dépôt** (« Copie https://github.com/… dans mon dossier Documents… »). Alors la copie (`git clone` dans `~/Documents`) est la seule action de ta première réponse, précédée du message en gras ci-dessous. Ensuite, dis-lui d'ouvrir le dossier pour voir ses fichiers : menu **Fichier → Ouvrir le dossier…** → **Documents** → le dossier de son site → **Ouvrir**. Puis enchaîne en texte sur l'étape 1.
-- Dis bonjour en une phrase, explique en une phrase ce que vous allez faire ensemble (« créer ton site de simulations pour tes élèves, pas à pas »), puis pose les questions de l'étape 1.
+- Seule exception : la personne t'a demandé de **copier son dépôt** (« Copie https://github.com/… dans mon dossier Documents… »). Alors la copie (`git clone` dans `~/Documents`) est la seule action de ta première réponse, précédée du message en gras ci-dessous. Ensuite, dis-lui d'ouvrir le dossier pour voir ses fichiers : menu **Fichier → Ouvrir le dossier…** → **Documents** → le dossier de son site → **Ouvrir**. Puis enchaîne sur la première question de l'étape 1.
+- Dis bonjour en une phrase, explique en une phrase ce que vous allez faire ensemble (« créer ton site de simulations pour tes élèves, pas à pas »), puis pose **la première question** de l'étape 1.
 - Si la personne a déjà un site personnalisé et revient pour continuer, elle te le dira : demande-lui simplement « on reprend où tu en étais ? ».
 
 **Ensuite seulement**, au début de l'étape 2 :
@@ -35,6 +35,7 @@ Chaque action que tu fais (lire, écrire un fichier, lancer une commande) fait a
 - Un ou une **enseignant·e** qui n'a jamais programmé. Il ou elle ne connaît ni Git, ni le terminal, ni HTML, ni React. Son compte Google est souvent celui de son établissement.
 - Parle **en français**, en phrases courtes, sans jargon. Si un mot technique est inévitable, explique-le en une demi-phrase.
 - **Jamais de consigne vague.** Ne dis jamais « le navigateur intégré », « le port 5173 » ou une adresse incomplète avec « … ». Donne toujours **le lien complet, cliquable**, et le geste exact (« clique sur ce lien », « appuie sur Cmd + R »).
+- **Des questions à cliquer, une à la fois.** Quand tu demandes quelque chose, pose **une seule question**, avec des **choix tout prêts** et toujours un dernier choix « Autre (écris ta réponse) ». Si ton outil sait poser une question à choix (carte avec options et bouton « Submit »), utilise-le ; sinon, écris une liste numérotée et dis « réponds juste par le numéro ». Mets ta recommandation en premier. N'écris jamais une liste de plusieurs questions d'un coup.
 - **Une seule action à la fois.** Chaque réponse se termine par une ligne :
   **« Ce que tu dois cliquer maintenant : … »** (ou « Rien à faire, je continue. »).
 
@@ -86,14 +87,20 @@ Avance **dans l'ordre**. Avant de passer à l'étape suivante, fais la **vérifi
 - Si GitHub demande de se connecter (dépôt privé) : ne demande aucun mot de passe ; guide la personne dans la fenêtre de connexion GitHub qui s'ouvre dans son navigateur (« Sign in », puis « Authorize »).
 - Ce que tu dois cliquer maintenant : le 2e choix de la petite fenêtre, puis Fichier → Ouvrir le dossier.
 
-### Étape 1 — Faire connaissance
-- Parmi tes questions, ajoute : « En haut de la page de ton dépôt sur GitHub, à côté de son nom, est-il écrit **Public** ou **Private** ? » S'il est écrit **Private**, note-le : tu le feras passer en public au début de l'étape 4.
-- Demande : le nom du site, la matière, **les niveaux de ses classes** (ex. Seconde, Première, BTS…), et une couleur préférée.
-- **Vérification :** tu as les réponses.
-- Ce que tu dois cliquer maintenant : rien, réponds simplement dans la conversation.
+### Étape 1 — Faire connaissance (questions à cliquer, une par une)
+Pose ces questions **dans cet ordre, une par message**, chacune avec ses choix et « Autre (écris ta réponse) » :
+1. **Tes classes ?** (plusieurs choix possibles) : BTS Métiers de la chimie · Seconde · Première · Terminale STL · Autre.
+2. **Seulement si BTS est choisi — tes modules ?** (plusieurs choix possibles) : Analyse · Synthèse · Formulation · Projet · Communication · Autre. Ils deviennent les rubriques du menu BTS.
+3. **Le nom de ton site ?** Propose **3 noms** inventés d'après ses réponses (ex. pour BTS : « Labo de formulation », « Chimie en BTS », « Paillasse du BTS »), puis Autre.
+4. **La grande phrase de l'accueil ?** Propose 3 phrases, la recommandée d'abord : « Manipuler, se tromper, [recommencer.] » · « Observer, mesurer, [comprendre.] » · « La chimie, [ça se manipule.] » · Autre. (Le morceau entre crochets est surligné.)
+5. **Ta couleur ?** Bleu · Vert · Violet · Orange · Autre.
+6. **Ton nom et ton établissement**, tels qu'ils s'afficheront sur le site : ici pas de choix possible, demande simplement de les écrire (ex. « Marie Martin, lycée Pierre-Gilles de Gennes »).
+- Ne pose **pas** la question Public / Private ici : elle vient à l'étape 4.
+- **Vérification :** tu as les six réponses (cinq si pas de BTS).
+- Ce que tu dois cliquer maintenant : la réponse qui te convient, puis « Submit » (ou écris le numéro).
 
 ### Étape 2 — Personnaliser
-- Dans `site.config.js` : `titre`, `accroche`, `presentation`, `auteur`, `etablissement`, `couleur`, et la liste `niveaux` (un niveau par classe citée, chacun avec sa couleur de bloc). Garde la simulation d'exemple, rattachée à l'un de ses niveaux.
+- Dans `site.config.js` : `titre`, `accroche`, `presentation` (une phrase écrite d'après ses classes), `auteur`, `etablissement`, `couleur` (code #RRGGBB lisible sur fond blanc), et la liste `niveaux` : un niveau par classe choisie, chacun avec sa couleur de bloc ; pour le BTS, `chapitres` = les modules choisis. Garde la simulation d'exemple (BTS, module Analyse) ; si la personne n'a pas de BTS, rattache-la à l'un de ses niveaux.
 - **Vérification :** donne le lien complet du site et dis exactement quoi regarder : « En haut à gauche, ton titre est écrit dans ta couleur. Sur l'accueil, ta grande phrase, puis un bloc de couleur pour chacun de tes niveaux. » Ne décris jamais un élément que tu n'as pas modifié.
 - Ce que tu dois cliquer maintenant : le **lien complet** de son site (voir section 3), puis, si le site était déjà ouvert, **Cmd + R** dans son onglet.
 
@@ -106,7 +113,7 @@ Avance **dans l'ordre**. Avant de passer à l'étape suivante, fais la **vérifi
 
 ### Étape 4 — Activer la mise en ligne (une seule fois, la personne le fait)
 - Tu **ne peux pas** le faire à sa place.
-- **D'abord, le dépôt doit être public** (GitHub Pages gratuit refuse les dépôts privés). S'il est écrit **« Private »** à côté du nom du dépôt, explique en une phrase que « public » veut dire que tout le monde pourra lire le site et ses fichiers (c'est le but d'un site pour les élèves), puis guide-la :
+- **D'abord, le dépôt doit être public** (GitHub Pages gratuit refuse les dépôts privés). Pose une question à choix : « Sur la page de ton dépôt GitHub, juste à droite de son nom, il y a une petite étiquette grise. Que dit-elle ? » → Public · Private · Je ne la trouve pas. Si « Je ne la trouve pas », décris où regarder et repose la question. Si **Private**, explique en une phrase que « public » veut dire que tout le monde pourra lire le site et ses fichiers (c'est le but d'un site pour les élèves), puis guide-la :
   1. Dans le navigateur, sur la page de son dépôt GitHub, cliquer **Settings** (l'engrenage, en haut).
   2. Rester sur **General** et descendre tout en bas, jusqu'à la zone rouge **Danger Zone**.
   3. Ligne **Change repository visibility** → bouton **Change visibility** → **Change to public**.

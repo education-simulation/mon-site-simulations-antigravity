@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const ETAPES = [
   ["Copier ton site sur l'ordinateur", "Dans Antigravity, tu as demandé à l'agent de copier ton dépôt. C'est fait si tu lis ce texte."],
-  ["Faire connaissance", "Écris « bonjour » à l'agent et réponds à ses questions."],
+  ["Faire connaissance", "L'agent te pose quelques questions, une par une : clique sur la réponse qui te convient."],
   ["Personnaliser le site", "L'agent change le titre, la couleur et les niveaux. Toi : recharge cet onglet (Cmd + R)."],
   ["Enregistrer dans GitHub", "L'agent s'en charge. La première fois, GitHub peut te demander de te connecter dans ton navigateur : clique « Authorize »."],
   ["Mettre en ligne (une seule fois)", "Sur GitHub, dans ton dépôt : Settings → Pages → Source : « GitHub Actions ». Ne clique sur aucun « Configure ». Le dépôt doit être Public. GitHub peut demander un code sur ton téléphone (application GitHub Mobile)."],

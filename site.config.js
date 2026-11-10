@@ -24,12 +24,13 @@ export default {
   couleur: "#0b4f94",
 
   // Les niveaux : un menu en haut du site et un bloc de couleur sur l'accueil pour chacun.
-  //   id      : abréviation courte (affichée en gros sur l'accueil)
-  //   nom     : nom complet
-  //   fond    : couleur du bloc ; texte : couleur des écritures sur ce bloc
+  //   id        : abréviation courte (affichée en gros sur l'accueil)
+  //   nom       : nom complet
+  //   fond      : couleur du bloc ; texte : couleur des écritures sur ce bloc
+  //   chapitres : (facultatif) les chapitres ou modules du menu, dans l'ordre, même encore vides
   niveaux: [
-    { id: "2GT", nom: "Seconde", fond: "#f5a31a", texte: "#3a2500" },
-    { id: "1G", nom: "Première", fond: "#2cc4ae", texte: "#04352d" },
+    { id: "BTS", nom: "BTS Métiers de la chimie", fond: "#5b4bdb", texte: "#ffffff",
+      chapitres: ["Analyse", "Synthèse", "Formulation", "Projet", "Communication"] },
   ],
 
   // Les simulations. Chacune :
@@ -37,9 +38,9 @@ export default {
   //   titre    : son nom dans le menu
   //   icone    : un émoji
   //   niveau   : l'id d'un des niveaux ci-dessus
-  //   chapitre : le chapitre où la ranger dans le menu de ce niveau
+  //   chapitre : le chapitre (ou module) où la ranger dans le menu de ce niveau
   //   fichier  : le nom du fichier dans simulations/ (sans « .jsx »)
   simulations: [
-    { id: "dilution", titre: "Dilution d'une solution", icone: "🧪", niveau: "2GT", chapitre: "Solutions aqueuses", fichier: "Dilution" },
+    { id: "dilution", titre: "Dilution d'une solution", icone: "🧪", niveau: "BTS", chapitre: "Analyse", fichier: "Dilution" },
   ],
 };

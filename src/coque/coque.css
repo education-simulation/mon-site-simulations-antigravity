@@ -45,6 +45,7 @@ button { font-family: inherit; }
 .ab-niv .ab-nb { margin: 0 0 14px; font-size: 13.5px; font-weight: 700; opacity: .88; }
 .ab-puces { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
 .ab-puces button { all: unset; cursor: pointer; display: block; padding: 7px 13px; border-radius: 999px; background: rgba(255,255,255,.26); color: inherit; font: 700 13.5px/1.3 'Nunito', sans-serif; }
+.ab-puce-vide { display: block; padding: 6px 12px; border-radius: 999px; border: 1.5px dashed currentColor; opacity: .75; font: 700 13px/1.3 'Nunito', sans-serif; }
 .ab-puces button:hover { background: #fff; color: #0c1a2e; }
 .ab-carte { grid-column: span 12; background: #fff; border: 1px solid #d5dfeb; border-radius: 28px; padding: 26px; }
 .ab-carte h3 { font: 800 21px 'Outfit', sans-serif; margin: 0 0 6px; }

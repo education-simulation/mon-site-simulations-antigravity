@@ -19,7 +19,7 @@ Tu es sur **ton** site.
 1. Copie l'adresse de cette page : clique dans la barre d'adresse du navigateur, puis **Cmd + C** (Mac) ou **Ctrl + C** (Windows).
 2. Ouvre **Antigravity** et écris à l'agent (colle l'adresse avec **Cmd + V** ou **Ctrl + V**) :
 
-   > **Copie &lt;l'adresse de ma page GitHub&gt; dans mon dossier Documents, puis lis AGENTS.md et guide-moi.**
+   > **Copie &lt;l'adresse de ma page GitHub&gt; dans mon dossier Documents, puis lis AGENTS.md et guide-moi. Si la copie échoue, explique-moi pourquoi en une phrase et arrête-toi.**
 
 3. Des petites fenêtres te demandent la permission : l'agent te dit à chaque fois sur quel choix cliquer.
 

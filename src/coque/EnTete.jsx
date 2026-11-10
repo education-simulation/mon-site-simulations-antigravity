@@ -53,7 +53,9 @@ export function EnTete({ titre, menus, activeId, niveauActif, naviguer }) {
   const chapitre = (c, k) => (
     <div key={k} style={{ minWidth: 0 }}>
       <div style={{ fontSize: 14.5, fontWeight: 800, background: "var(--accent-clair)", borderLeft: "4px solid var(--accent)", borderRadius: 6, padding: "5px 10px", margin: "6px 0 4px" }}>{c.nom}</div>
-      <div style={{ display: "flex", flexDirection: "column", marginLeft: 8 }}>{c.sims.map(lienSim)}</div>
+      <div style={{ display: "flex", flexDirection: "column", marginLeft: 8 }}>
+        {c.sims.length ? c.sims.map(lienSim) : <span style={{ padding: "7px 10px", fontSize: 14, color: "var(--texte2)" }}>Bientôt des simulations ici.</span>}
+      </div>
     </div>
   );
   const vide = <p style={{ margin: "6px 10px", color: "var(--texte2)" }}>Pas encore de simulation pour ce niveau.</p>;
@@ -72,7 +74,11 @@ export function EnTete({ titre, menus, activeId, niveauActif, naviguer }) {
       <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: "100%", padding: "0 16px", maxWidth: 1280, margin: "0 auto" }}>
         <a href="?" onClick={(e) => { e.preventDefault(); aller(null); }} title="Retour à l'accueil"
           style={{ alignSelf: "center", textDecoration: "none", marginRight: 14, display: "flex", alignItems: "center", gap: 8, minWidth: 0 }}>
-          <img src="./favicon.svg" alt="" width="34" height="34" style={{ borderRadius: 9, flexShrink: 0 }} />
+          <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" style={{ flexShrink: 0 }}>
+            <rect width="64" height="64" rx="14" fill="var(--accent)" />
+            <path d="M26 12h12M28 12v14L16 48a4 4 0 0 0 3.5 6h25a4 4 0 0 0 3.5-6L36 26V12" fill="none" stroke="#fff" strokeWidth="4" strokeLinejoin="round" strokeLinecap="round" />
+            <path d="M21 42h22" stroke="#f5a31a" strokeWidth="4" strokeLinecap="round" />
+          </svg>
           <span style={{ font: "800 20px 'Outfit', sans-serif", color: "var(--accent)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{titre}</span>
         </a>
 

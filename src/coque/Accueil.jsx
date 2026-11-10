@@ -35,6 +35,9 @@ export function Accueil({ site, menus, naviguer }) {
                 {m.chapitres.flatMap((c) => c.sims).map((s) => (
                   <li key={s.id}><button type="button" onClick={() => naviguer(s.id)}>{s.icone} {s.titre}</button></li>
                 ))}
+                {m.chapitres.filter((c) => !c.sims.length).map((c) => (
+                  <li key={c.nom}><span className="ab-puce-vide">{c.nom} · bientôt</span></li>
+                ))}
               </ul>
             </section>
           );
