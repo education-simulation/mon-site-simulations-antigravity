@@ -77,7 +77,7 @@ L'aperçu tourne **sur l'ordinateur de la personne**. À ta première vraie acti
 `npm install && npm run dev`
 - Le lien est **celui que Vite affiche après « Local: »** (par exemple `http://localhost:5537/`). Chaque site a son propre numéro, tiré du nom de son dossier : **ne suppose jamais 5173**, lis toujours la ligne « Local: ». La personne peut avoir plusieurs sites et plusieurs conversations ouvertes en même temps : un autre numéro serait peut-être un **autre** de ses sites. Garde le lien et **donne-le en entier** chaque fois que la personne doit regarder son site.
 - Les fois suivantes, l'aperçu n'est plus lancé : relance `npm run dev` en arrière-plan dès ta première action.
-- **Si la commande répond que `npm` est introuvable** (« command not found ») : Node.js n'est pas installé. Tu ne peux pas l'installer toi-même. Guide la personne, une consigne à la fois : « Ouvre https://nodejs.org dans ton navigateur et clique sur le gros bouton vert **Télécharger (LTS)**. Ouvre le fichier téléchargé, puis clique **Continuer**, **Accepter**, **Installer** (l'ordinateur demande ton mot de passe : c'est normal). À la fin, **ferme complètement Antigravity** (Cmd + Q sur Mac) et rouvre-le, puis écris-moi « c'est installé ». »
+- **Si la commande répond que `npm` est introuvable** : Node.js n'est pas installé (la vérification de l'étape 0 a été sautée). Affiche le message Node.js de l'étape 0, tel quel. Tu ne peux pas l'installer toi-même.
 - **Si `git` est introuvable** (Mac) : une fenêtre du Mac propose d'installer les « outils de ligne de commande » : la personne clique **Installer** et attend la fin (quelques minutes).
 
 Pour montrer un changement, la consigne est toujours de cette forme :
@@ -93,6 +93,20 @@ Avance **dans l'ordre**. Avant de passer à l'étape suivante, fais la **vérifi
   2. « Quel nom donner au dossier de ton site ? » → mon-site · site-simulations · Autre (lettres minuscules et tirets, sans espace ni accent : c'est aussi le début de l'adresse de ton site en ligne).
 - Puis copie : `git clone --depth 1 <adresse> <dossier choisi>/<nom choisi>` — ou, si Antigravity l'a déjà copié dans `.gemini/antigravity/scratch`, **déplace** ce dossier : `mv <chemin actuel> <dossier choisi>/<nom choisi>` — et dis-lui d'ouvrir le dossier : menu **Fichier → Ouvrir le dossier…** → le dossier choisi → le dossier du site → **Ouvrir**.
 - Si la copie échoue, explique pourquoi en une phrase et arrête-toi : n'invente pas d'autre solution.
+- **Juste après la copie, vérifie que Node.js est installé** (le moteur de l'aperçu), avec une seule commande : `node -v`.
+  - Si elle affiche un numéro (`v20…`, `v22…`, `v24…` ou plus) : ne dis rien de technique, passe à l'étape 1.
+  - Si elle répond « command not found » / « n'est pas reconnu », ou un numéro plus petit que `v20.19` : écris d'abord `PROGRESSION.md` avec `- [x] Étape 0 — Copier le modèle`, puis affiche **exactement** ce message, sans rien ajouter :
+
+    > Il manque un logiciel gratuit sur ton ordinateur : **Node.js**. C'est le moteur qui fait tourner l'aperçu de ton site. On l'installe une seule fois, en 5 minutes environ :
+    > 1. Clique sur ce lien : https://nodejs.org/fr/download
+    > 2. Clique sur le bouton de téléchargement de l'**installateur** pour ton ordinateur : « macOS Installer (.pkg) » sur Mac, « Windows Installer (.msi) » sur Windows.
+    > 3. Ouvre le fichier téléchargé, puis clique sur **Continuer**, **Accepter**, **Installer**. L'ordinateur demande ton mot de passe : c'est normal.
+    > 4. À la fin, **quitte complètement Antigravity** (Cmd + Q sur Mac ; sur Windows, ferme la fenêtre) et rouvre-le.
+    > 5. Rouvre le dossier de ton site (Fichier → Ouvrir le dossier…) et écris-moi : **« c'est installé »**.
+    >
+    > Ce que tu dois cliquer maintenant : le lien ci-dessus.
+
+    Puis pose la question à choix : C'est installé · Je suis bloqué·e. Quand la personne revient (« c'est installé », « on reprend »), relance `node -v` : si c'est bon, passe à l'étape 1 ; sinon, demande-lui une capture de l'écran où elle bloque.
 - Pas besoin de compte GitHub : le modèle est public.
 - Ce que tu dois cliquer maintenant : le 2e choix de la petite fenêtre, puis Fichier → Ouvrir le dossier.
 
@@ -142,7 +156,7 @@ Propose, une par une : une deuxième simulation, un nouveau module ou chapitre, 
 |---|---|---|
 | L'aperçu ne s'ouvre pas (« connexion refusée ») | Le serveur n'est pas lancé (Antigravity a été fermé) | Relancer `npm run dev` en arrière-plan |
 | L'aperçu montre un autre site que celui de la conversation | Lien d'un autre site (autre dossier, autre conversation) | Relire la ligne « Local: » du serveur lancé dans CE dossier et redonner ce lien |
-| `npm` introuvable | Node.js pas installé | Section 3 : guider l'installation depuis nodejs.org |
+| `node` ou `npm` introuvable | Node.js pas installé | Message Node.js de l'étape 0, tel quel |
 | Encadré rouge « Cette simulation n'a pas pu s'afficher » | Erreur dans le fichier de la simulation | Lire le message affiché, corriger `simulations/<Nom>.jsx` |
 | « Simulation … introuvable » ou « Fichier … introuvable » | `id` ou `fichier` faux | Vérifier la ligne dans `site.config.js` |
 | `npm run build` échoue avant la mise en ligne | Erreur dans un fichier `.jsx` ou dans `site.config.js` | Corriger, puis relancer la même commande |

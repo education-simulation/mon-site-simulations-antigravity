@@ -18,7 +18,7 @@ Pas besoin de compte GitHub. Il te faut seulement **Antigravity**, installé sur
 4. Des petites fenêtres te demandent la permission : l'agent te dit à chaque fois sur quel choix cliquer.
 
 L'agent te guide ensuite pas à pas, avec des questions à cliquer : personnaliser ton site, le voir sur ton ordinateur, le mettre en ligne avec Vercel (la première fois : « Continue with Google »), créer tes simulations.
-La première fois, il te fera peut-être installer **Node.js** (gratuit, sur nodejs.org) : c'est le moteur qui fait tourner l'aperçu de ton site.
+Au départ, il vérifie que **Node.js** est installé (le moteur gratuit qui fait tourner l'aperçu de ton site). S'il manque, il te guide pour l'installer en 5 minutes depuis nodejs.org.
 
 ### Les fois suivantes
 

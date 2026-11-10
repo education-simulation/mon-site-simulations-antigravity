@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 
 const ETAPES = [
-  ["Copier le modèle sur l'ordinateur", "Dans Antigravity, tu as demandé à l'agent de copier le modèle. C'est fait si tu lis ce texte."],
+  ["Copier le modèle sur l'ordinateur", "L'agent copie le modèle dans le dossier que tu as choisi et vérifie que Node.js est installé (sinon, il te guide pour l'installer). C'est fait si tu lis ce texte."],
   ["Faire connaissance", "L'agent te pose quelques questions, une par une : clique sur la réponse qui te convient."],
   ["Personnaliser le site", "L'agent change le titre, la couleur et les niveaux. Toi : recharge cet onglet (Cmd + R)."],
   ["Mettre en ligne avec Vercel", "La première fois : clique sur le lien donné par l'agent, « Continue with Google » avec ton compte d'établissement, vérifie le code, puis « Confirm »."],
